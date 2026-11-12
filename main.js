@@ -6,7 +6,6 @@ async function getProducts() {
 
     const container = document.getElementById("products-container");
     
-    // Fixed: Added .join("") right after .map() to prevent commas from appearing in the HTML
     const productCard = products.map(product => `
         <div>
           
