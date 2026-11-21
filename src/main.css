@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+}
+
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+.categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories-list li {
+    margin-bottom: 8px;
+}
+
+.categories-list button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #f1f1f1;
+    text-align: left;
+    cursor: pointer;
+}
+
+.categories-list button:hover,
+.categories-list button.active {
+    background: #526b50;
+    color: white;
+}
+
+
+
+.products {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.products-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.product-info p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #526b50;
+}
+
+.rating {
+    color: #d99b22;
+}
+
+.stock {
+    font-size: 14px;
+}
+
+.product-info button {
+    width: 100%;
+    padding: 10px;
+    background: #526b50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.d-none{
+    display: none;
+}
+.category-loader {
+  width: 120px;
+  height: 20px;
+  background: 
+    linear-gradient(#000 50%,#0000 0),
+    linear-gradient(#0000 50%,#000 0),
+    linear-gradient(#000 50%,#0000 0),
+    linear-gradient(#0000 50%,#000 0),
+    linear-gradient(#000 50%,#0000 0),
+    linear-gradient(#0000 50%,#000 0)
+    #ddd;
+  background-size: calc(100%/6 + 1px) 200%;
+  background-repeat: no-repeat;
+  animation: l12 2s infinite;
+}
+@keyframes l12 {
+  0%     {background-position: calc(0*100%/5) 100%,calc(1*100%/5)   0%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  16.67% {background-position: calc(0*100%/5)   0%,calc(1*100%/5)   0%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  33.33% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  50%    {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  66.67% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  83.33% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5)   0%,calc(5*100%/5)   0%}
+  100%   {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5)   0%,calc(5*100%/5) 100%}
+}
+.products-loader {
+  width: 120px;
+  height: 20px;
+  background: 
+    linear-gradient(#a22e2e 50%,#8e030300 0),
+    linear-gradient(#813d3d00 50%,#000 0),
+    linear-gradient(#913a22 50%,#b0070700 0),
+    linear-gradient(#0000 50%,#000 0),
+    linear-gradient(#8a0707 50%,#0000 0),
+    linear-gradient(#0000 50%,#9c0b0b 0)
+    #ddd;
+  background-size: calc(100%/6 + 1px) 200%;
+  background-repeat: no-repeat;
+  animation: l12 2s infinite;
+}
+@keyframes l12 {
+  0%     {background-position: calc(0*100%/5) 100%,calc(1*100%/5)   0%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  16.67% {background-position: calc(0*100%/5)   0%,calc(1*100%/5)   0%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  33.33% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5) 100%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  50%    {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5)   0%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  66.67% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5) 100%,calc(5*100%/5)   0%}
+  83.33% {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5)   0%,calc(5*100%/5)   0%}
+  100%   {background-position: calc(0*100%/5)   0%,calc(1*100%/5) 100%,calc(2*100%/5)   0%,calc(3*100%/5) 100%,calc(4*100%/5)   0%,calc(5*100%/5) 100%}
+}
